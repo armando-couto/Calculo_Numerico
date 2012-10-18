@@ -6,4 +6,5 @@ public class Gauss_Jacobi implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 
+	private String e;
 }
