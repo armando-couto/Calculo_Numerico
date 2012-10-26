@@ -55,7 +55,6 @@ public class InterpolacaoPolinomial implements Serializable {
 	}
 
 	public static void main(String[] args) {
-		InterpolacaoPolinomial ip = new InterpolacaoPolinomial();
-		ip.solInterpolacaoPolinomial();
+		new InterpolacaoPolinomial().solInterpolacaoPolinomial();
 	}
 }

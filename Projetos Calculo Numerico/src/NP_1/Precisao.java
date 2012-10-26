@@ -3,7 +3,7 @@ package NP_1;
 /**
  * Método que mostra a precisão do computador.
  * @author Armando Couto
- *
+ * Bibliografia:
  */
 public class Precisao {
 

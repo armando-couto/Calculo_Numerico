@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 /**
  * Método que tira a raiz.
  * @author Armando Couto
- *
+ * Bibliografia:
  */
 public class Raiz implements Serializable {
 

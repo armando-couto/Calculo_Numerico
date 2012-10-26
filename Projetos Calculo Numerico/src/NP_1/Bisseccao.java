@@ -7,7 +7,8 @@ import javax.swing.JOptionPane;
 /**
  * Método da Bisseccao.
  * @author Armando Couto
- * Bibliografia http://www.devmedia.com.br/resolucao-de-equacoes-metodo-da-bisseccao/24086
+ * Bibliografia:
+ * http://www.devmedia.com.br/resolucao-de-equacoes-metodo-da-bisseccao/24086
  */
 public class Bisseccao implements Serializable {
 

@@ -2,6 +2,11 @@ package NP_1;
 
 import javax.swing.JOptionPane;
 
+/**
+ * Método de Newton Raphson.
+ * @author Armando Couto
+ * Bibliografia:
+ */
 public class NewtonRaphson {
 
 	public static void main(String[] args) {

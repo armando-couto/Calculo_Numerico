@@ -2,12 +2,11 @@ package NP_1;
 
 import java.io.Serializable;
 
-import javax.swing.JOptionPane;
-
 /**
  * Método de Eliminação de Gauss. 
  * @author Armando Couto
- * Fonte: http://introcs.cs.princeton.edu/java/95linear/GaussianElimination.java.html
+ * Bibliografia:
+ * http://introcs.cs.princeton.edu/java/95linear/GaussianElimination.java.html
  */
 public class Gauss_Eliminacao implements Serializable {
 
