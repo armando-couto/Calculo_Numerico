@@ -1,6 +1,8 @@
 package NP_2;
 
-import java.util.Scanner;
+import java.io.Serializable;
+
+import javax.swing.JOptionPane;
 
 /**
  * Método de Integração da Regra do Trapézio.
@@ -9,30 +11,30 @@ import java.util.Scanner;
  * http://penguin.ewu.edu/cscd543/Wint-2006/NumInt/Trapezoid.rtf
  * http://wood.mendelu.cz/math/maw-html/index.php?lang=pt&form=trap
  */
-public class RegraTrapezio {
-	static double trapezoidRule(int size, double[] x, double[] y) {
-		double sum = 0.0, increment;
-		for (int k = 1; k < size; k++) {// Trapezoid rule: 1/2 h * (f0 + f1)
-			increment = 0.5 * (x[k] - x[k - 1]) * (y[k] + y[k - 1]);
-			sum += increment;
-		}
-		return sum;
-	}
+public class RegraTrapezio implements Serializable {
 
-	public static void main(String[] args) throws Exception {
-		Scanner inp = new Scanner(System.in);
-		int k, size;
+	private static final long serialVersionUID = 1L;
+	
+	public static void main(String[] args) {
+		int tamanho;
 		double[] x, y;
-		double integral;
-		size = inp.nextInt();
-		System.out.println("Number of points: " + size);
-		x = new double[size];
-		y = new double[size];
-		for (k = 0; k < size; k++) {
-			x[k] = inp.nextDouble();
-			y[k] = inp.nextDouble();
+		
+		tamanho = Integer.parseInt(JOptionPane.showInputDialog("Tamanho do vetor: "));
+		x = new double[tamanho];
+		y = new double[tamanho];
+		for (int i = 0; i < tamanho; i++) {
+			x[i] = Double.parseDouble(JOptionPane.showInputDialog("X["+i+"]: "));
+			y[i] = Double.parseDouble(JOptionPane.showInputDialog("Y["+i+"]: "));
 		}
-		integral = trapezoidRule(size, x, y);
-		System.out.printf("Integral: %4.4f\n", integral);
+		JOptionPane.showMessageDialog(null, "Valor: "+new RegraTrapezio().trapezoidRule(tamanho, x, y));
+	}
+	
+	public double trapezoidRule(int tamanho, double[] x, double[] y) {
+		double soma = 0.0, auxiliar;
+		for (int i = 1; i < tamanho; i++) {// Trapézio: 1/2 h * (f0 + f1)
+			auxiliar = 0.5 * (x[i] - x[i - 1]) * (y[i] + y[i - 1]);
+			soma += auxiliar;
+		}
+		return soma;
 	}
 }
