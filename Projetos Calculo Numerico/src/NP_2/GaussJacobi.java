@@ -8,7 +8,7 @@ import java.io.Serializable;
  * Bibliografia:
  * http://www.raymundodeoliveira.eng.br/Metodo_Jacobi.htm
  */
-public class Gauss_Jacobi implements Serializable {
+public class GaussJacobi implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -48,6 +48,6 @@ public class Gauss_Jacobi implements Serializable {
 	}
 	
 	public static void main(String[] args) {
-		new Gauss_Jacobi().metodoJabobi();
+		new GaussJacobi().metodoJabobi();
 	}
 }
